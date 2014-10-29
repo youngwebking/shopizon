@@ -1,0 +1,11 @@
+<%= content_for :page_title do %>Home<% end %>
+<h1>Users</h1>
+<ol>
+  <% @users.each do |user| %>
+    <li>
+      <p>Email: <%= link_to user.email, user %></p>
+    </li>
+  <% end %>
+  
+  <%= link_to "Create account!", new_user_path %>
+</ol>
